@@ -1,4 +1,11 @@
 <template>
+
+
+<div> 
+  <h1 class="bg-rose-600">hola como estamos </h1>
+</div>
+
+
   <!--contenedor login-->
   <div class="container-fluid">
     <div class="row justify-content-center align-items-center vh-100">

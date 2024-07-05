@@ -4,23 +4,11 @@
     <form @submit.prevent="crearNota">
       <div class="mb-3">
         <label for="titulo" class="form-label">Título:</label>
-        <input
-          type="text"
-          v-model="nuevaNota.titulo"
-          class="form-control"
-          id="titulo"
-          required
-        />
+        <input type="text" v-model="nuevaNota.titulo" class="form-control" id="titulo" required />
       </div>
       <div class="mb-3">
         <label for="contenido" class="form-label">Contenido:</label>
-        <textarea
-          v-model="nuevaNota.contenido"
-          class="form-control"
-          id="contenido"
-          rows="3"
-          required
-        ></textarea>
+        <textarea v-model="nuevaNota.contenido" class="form-control" id="contenido" rows="3" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Crear Nota</button>
     </form>
@@ -32,7 +20,7 @@
     <div v-else>
       <div v-for="nota in notas" :key="nota.id" class="card my-2">
         <div class="card-body">
-          <h5 class="card-title">{{ nota.titulo }}</h5>
+          <h5 class="card-title">{{ nota.titulo }} {{ nota }}</h5>
           <p class="card-text">{{ nota.contenido }}</p>
           <button @click="abrirModal(nota)" class="btn btn-secondary">Editar</button>
           <button @click="eliminarNota(nota.id)" class="btn btn-danger">Eliminar</button>
@@ -54,23 +42,12 @@
             <form @submit.prevent="actualizarNota">
               <div class="mb-3">
                 <label for="editTitulo" class="form-label">Título:</label>
-                <input
-                  type="text"
-                  v-model="notaEditando.titulo"
-                  class="form-control"
-                  id="editTitulo"
-                  required
-                />
+                <input type="text" v-model="notaEditando.titulo" class="form-control" id="editTitulo" required />
               </div>
               <div class="mb-3">
                 <label for="editContenido" class="form-label">Contenido:</label>
-                <textarea
-                  v-model="notaEditando.contenido"
-                  class="form-control"
-                  id="editContenido"
-                  rows="3"
-                  required
-                ></textarea>
+                <textarea v-model="notaEditando.contenido" class="form-control" id="editContenido" rows="3"
+                  required></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Actualizar Nota</button>
             </form>

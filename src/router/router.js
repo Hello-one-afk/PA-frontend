@@ -5,7 +5,7 @@ import NotasPage from "@/pages/NotasPage.vue"
 
 
 const routes = [
-  { path: "/", component: LoginPage },
+  { path: "/", component: LoginPage }, 
   { path: "/notas", component: NotasPage },
 
 ];

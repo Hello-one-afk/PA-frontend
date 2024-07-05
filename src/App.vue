@@ -2,6 +2,7 @@
   <Suspense>
     <RouterView />
   </Suspense>
+
 </template>
 
 <script>
